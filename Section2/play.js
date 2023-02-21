@@ -31,3 +31,22 @@ const hobbies = ["Sport","Lecture"];
 console.log(hobbies);
 //.map
 console.log(hobbies.map(hobby => "Loisir : "+hobby));
+
+//spread operator : copie un par un les éléments
+const hobbiesCopy = [...hobbies];
+console.log(hobbiesCopy);
+//exemple 2 :
+const personCopy = {...person}
+console.log(personCopy);
+
+//rest operator : nombre flexible de parametres
+const rest = (...args) => {
+    //retourne chaque élément passé en parametre
+    return args;
+};
+console.log(rest(1,2,3,4,5,6,7,8,9,10));
+/*
+En résumé :
+    Spread : Permet de déconstruire les itérables (tableaux/objets/chaînes) en éléments uniques
+    Rest: Rassemble tous les éléments restants dans un tableau
+*/
