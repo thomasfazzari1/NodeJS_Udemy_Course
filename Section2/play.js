@@ -15,3 +15,14 @@ const unPlusDeux = () => 1 + 2;
 
 console.log(resume(name,age));
 console.log(unPlusDeux());
+
+const person={
+    name: "Thomas",
+    age: 21,
+    //pas d'arrow function dans un objet
+    fonction() {
+        console.log("Bonjour, je m'appelle " + this.name);
+    }
+}
+
+person.fonction();
