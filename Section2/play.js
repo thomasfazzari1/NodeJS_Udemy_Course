@@ -16,7 +16,7 @@ console.log(resume(name,age));
 console.log(unPlusDeux());
 
 
-
+//objet
 const person={
     name: "Thomas",
     age: 21,
@@ -63,3 +63,12 @@ const printName = ({ name }) => {
     console.log(name);
 }
 printName(person);
+
+
+//template literals 
+const prenom = 'Thomas';
+console.log(`Bonjour ${prenom}`);
+
+
+
+
