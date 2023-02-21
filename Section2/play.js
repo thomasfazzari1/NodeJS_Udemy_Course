@@ -24,5 +24,10 @@ const person={
         console.log("Bonjour, je m'appelle " + this.name);
     }
 }
-
 person.fonction();
+
+const hobbies = ["Sport","Lecture"];
+//équivaut à un for (let hobby of hobbies) {...}
+console.log(hobbies);
+//.map
+console.log(hobbies.map(hobby => "Loisir : "+hobby));
