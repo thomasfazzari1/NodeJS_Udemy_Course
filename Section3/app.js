@@ -21,17 +21,17 @@ const server = http.createServer((req,res) => {
     if (url === '/message' && req.method === 'POST') {
         const body = [];
         req.on('data', (chunk) => {
-        console.log(chunk);
-        body.push(chunk);
+            console.log(chunk);
+            body.push(chunk);
         });
-        req.on('end', () => {
+        return req.on('end', () => {
             const parsedBody = Buffer.concat(body).toString();
             const message = parsedBody.split('=')[1];
             fs.writeFileSync('message.txt', message);
+            res.statusCode=302;
+            res.setHeader('Location','/');
+            return res.end();
         });
-        res.statusCode = 302;
-        res.setHeader('Location', '/');
-        return res.end();
     }
 
     //on précise au navigateur que le type d'élément renvoyé est du html
